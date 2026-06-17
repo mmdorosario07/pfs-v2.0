@@ -1,12 +1,18 @@
 import java.awt.GridBagLayout;
+import java.awt.event.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.Arrays;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.Timer;
 
 public class RegistrarUsuario extends JDialog {
-
+    private JButton add_user_btn;
     public RegistrarUsuario() {
         //login window
         setLayout(new GridBagLayout());
@@ -36,9 +42,69 @@ public class RegistrarUsuario extends JDialog {
         JPasswordField pswd_input_2 = new JPasswordField(20);
         add(pswd_input_2, new GridConf(1,3,1,1,'n'));
 
-        JButton goto_game = new JButton("Go!");
-        add(goto_game, new GridConf(0,4,2,1,'h'));
+        add_user_btn = new JButton("Go!");
+        add(add_user_btn, new GridConf(0,4,2,1,'h'));
         
+        //Evento para criar usuário
+        ActionListener eventAddUser = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent event) {
+
+                //ver se as passwords corespondem
+                if (Arrays.equals(pswd_input_2.getPassword(), pswd_input_1.getPassword())) {
+                    //ver se o nome está vazio
+                    if (name_input.getText() == null || name_input.getText().isBlank()) {
+                        add_user_btn.setText("Name cannot be empty");//Alerta!
+                    } else {
+                        //Cria o usuário
+                        create_user(name_input.getText(), new String(pswd_input_1.getPassword()));
+                    }
+                } else {
+                    add_user_btn.setText("Pswd dont correspond");//alerta caso as psdw forem diferentes
+                }
+            }
+        };
+
+        add_user_btn.addActionListener(eventAddUser);
     }
-    
+
+
+    private void save_user(String name, String pswd) {
+        try (FileWriter new_user = new FileWriter("data/user.csv", true)) {
+            new_user.write(name.replace(",", "")+","+pswd.replace(",", "")+"\n");
+        } catch (Exception e) {
+            System.out.println("Filenotound");
+        }
+    }
+
+    private void create_user(String name, String pswd) {
+        java.io.File file = new java.io.File("data/user.csv");
+        boolean user_exist = false;
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))){
+            String data;
+            while ((data = reader.readLine()) != null) {
+                String[] value = data.split(",");
+                if (value.length > 0 && value[0].trim().equalsIgnoreCase(name)) {
+                    user_exist = true;
+                    break;
+                }
+            }
+
+            if (user_exist) {
+                add_user_btn.setText("User Already exists");
+            } else {
+                save_user(name, pswd);
+                add_user_btn.setText("User Created!");
+                add_user_btn.setEnabled(false);//desativa o botão
+
+                Timer timer = new Timer(1000, e -> {
+                    RegistrarUsuario.this.dispose();//fecha o dialog
+                });
+                timer.setRepeats(false);
+                timer.start();
+            }
+        } catch (Exception e) {
+            System.out.println("Erro");
+        }
+    }
 }

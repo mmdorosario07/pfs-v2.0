@@ -77,7 +77,9 @@ public class Login extends JFrame{
 
     }
 
+    @SuppressWarnings("Convert2Lambda")
     ActionListener create_user = new ActionListener() {
+        @SuppressWarnings("override")
         public void actionPerformed(ActionEvent event) {
             JDialog createUser = new RegistrarUsuario();
             createUser.setVisible(true);
