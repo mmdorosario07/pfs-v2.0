@@ -24,25 +24,26 @@ public class RegistrarUsuario extends JDialog {
         JLabel loginLabel = new JLabel("Criar Conta");//titulo
         add(loginLabel, new GridConf(0,0,2,1, 'h'));
 
+        //Username Field
         JLabel name_field = new JLabel("Nome");//depois adicionar icones ilustrativos
         add(name_field, new GridConf(0,1,1,1,'n'));
-
         JTextField name_input = new JTextField(20);
         add(name_input, new GridConf(1,1,1,1,'n'));
 
+        //Password field
         JLabel pswd_field_1 = new JLabel("Password");
         add(pswd_field_1, new GridConf(0,2,1,1,'n'));
-
         JPasswordField pswd_input_1 = new JPasswordField(20);
         add(pswd_input_1, new GridConf(1,2,1,1,'n'));
 
+        //Confirmar Password field
         JLabel pswd_field_2 = new JLabel("Confirmar Password");
         add(pswd_field_2, new GridConf(0,3,1,1,'n'));
-
         JPasswordField pswd_input_2 = new JPasswordField(20);
         add(pswd_input_2, new GridConf(1,3,1,1,'n'));
 
-        add_user_btn = new JButton("Go!");
+        //Botão confirmar
+        add_user_btn = new JButton("Criar Conta");
         add(add_user_btn, new GridConf(0,4,2,1,'h'));
         
         //Evento para criar usuário
@@ -57,7 +58,7 @@ public class RegistrarUsuario extends JDialog {
                         add_user_btn.setText("Name cannot be empty");//Alerta!
                     } else {
                         //Cria o usuário
-                        create_user(name_input.getText(), new String(pswd_input_1.getPassword()));
+                        seeIfUserExists(name_input.getText(), new String(pswd_input_1.getPassword()));
                     }
                 } else {
                     add_user_btn.setText("Pswd dont correspond");//alerta caso as psdw forem diferentes
@@ -68,18 +69,29 @@ public class RegistrarUsuario extends JDialog {
         add_user_btn.addActionListener(eventAddUser);
     }
 
-
-    private void save_user(String name, String pswd) {
+    //Adicionar o usuário Ao ficheiro de dados
+    private void saveNewUserToFile(String name, String pswd) {
         try (FileWriter new_user = new FileWriter("data/user.csv", true)) {
             new_user.write(name.replace(",", "")+","+pswd.replace(",", "")+"\n");
+
+            add_user_btn.setText("User Created!");
+            add_user_btn.setEnabled(false);//desativa o botão
+
+            Timer timer = new Timer(1000, e -> {
+                RegistrarUsuario.this.dispose();//fecha o dialog
+            });
+            timer.setRepeats(false);
+            timer.start();
         } catch (Exception e) {
-            System.out.println("Filenotound");
+            e.printStackTrace();
         }
     }
 
-    private void create_user(String name, String pswd) {
-        java.io.File file = new java.io.File("data/user.csv");
-        boolean user_exist = false;
+    private void seeIfUserExists(String name, String pswd) {
+
+        java.io.File file = new java.io.File("data/user.csv");//Db File
+        boolean user_exist = false;//ver se o usuário existe
+
         try (BufferedReader reader = new BufferedReader(new FileReader(file))){
             String data;
             while ((data = reader.readLine()) != null) {
@@ -92,16 +104,10 @@ public class RegistrarUsuario extends JDialog {
 
             if (user_exist) {
                 add_user_btn.setText("User Already exists");
-            } else {
-                save_user(name, pswd);
-                add_user_btn.setText("User Created!");
-                add_user_btn.setEnabled(false);//desativa o botão
 
-                Timer timer = new Timer(1000, e -> {
-                    RegistrarUsuario.this.dispose();//fecha o dialog
-                });
-                timer.setRepeats(false);
-                timer.start();
+            } else {
+                add_user_btn.setText("Creating User");
+                saveNewUserToFile(name, pswd);
             }
         } catch (Exception e) {
             System.out.println("Erro");
