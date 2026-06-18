@@ -12,6 +12,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import java.io.*;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 
 public class Login extends JFrame{
 
@@ -41,49 +45,79 @@ public class Login extends JFrame{
 
         //login window
         JPanel loginPanel = new JPanel(new GridBagLayout());
-
         JLabel loginLabel = new JLabel("Login");//titulo
         loginPanel.add(loginLabel, new GridConf(0,0,2,1, 'h'));
 
-
+        //entrada do nome
         JLabel name_field = new JLabel("Nome");//depois adicionar icones ilustrativos
         loginPanel.add(name_field, new GridConf(0,1,1,1,'n'));
-
         JTextField name_input = new JTextField(20);
         loginPanel.add(name_input, new GridConf(1,1,1,1,'n'));
 
+        //entrada do pswd
         JLabel pswd_field = new JLabel("Password");
         loginPanel.add(pswd_field, new GridConf(0,2,1,1,'n'));
-
         JPasswordField pswd_input = new JPasswordField(20);
         loginPanel.add(pswd_input, new GridConf(1,2,1,1,'n'));
 
         JButton goto_game = new JButton("Go!");
         loginPanel.add(goto_game, new GridConf(0,3,2,1,'h'));
+        
 
+        //Adicionar usuario
         JLabel add_acct = new JLabel("Sem Conta?");
         loginPanel.add(add_acct, new GridConf(0,4,1,1,'n'));
-
         JButton add_user = new JButton("Criar Conta");
         loginPanel.add(add_user, new GridConf(1,4,1,1,'h'));
         add_user.addActionListener(create_user);
-
+        //Ver ranking
         JButton ranking = new JButton("Ver Ranking Global");
         loginPanel.add(ranking, new GridConf(0,5,2,1,'h'));
 
         //por fim adicionar os elementos
         add(imgJPanel);
         add(loginPanel);
+        ActionListener login_to_game = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent event) {
+                loginToGame(name_input.getText(), new String(pswd_input.getPassword()));
+            }
+        };
+        goto_game.addActionListener(login_to_game);
 
     }
 
-    @SuppressWarnings("Convert2Lambda")
     ActionListener create_user = new ActionListener() {
-        @SuppressWarnings("override")
+        @Override
         public void actionPerformed(ActionEvent event) {
             JDialog createUser = new RegistrarUsuario();
             createUser.setVisible(true);
         }
     };
 
+    private void loginToGame(String name, String pswd) {
+        System.out.println("login");
+        String saved_pswd = "12";
+        if (true) {
+            if (pswd.equals(saved_pswd)) {
+                FutQuiz quiz = new FutQuiz();
+            }
+        } else {
+            goto_game.setText("User dont exist");
+        }
+    }
+    private String[] getUserdata(String name) {
+        java.io.File file = new java.io.File("data/user.csv");//Db File
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))){
+            String data;
+            while ((data = reader.readLine()) != null) {
+                String[] value = data.split(",");
+                if (value.length > 0 && value[0].trim().equalsIgnoreCase(name)) return value;
+            }
+            
+        } catch (Exception e) {
+            System.out.println("Erro");
+        }
+        return  false;
+    }
 }

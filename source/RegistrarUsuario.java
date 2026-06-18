@@ -72,8 +72,10 @@ public class RegistrarUsuario extends JDialog {
     //Adicionar o usuário Ao ficheiro de dados
     private void saveNewUserToFile(String name, String pswd) {
         try (FileWriter new_user = new FileWriter("data/user.csv", true)) {
+            //Salva o usuário
             new_user.write(name.replace(",", "")+","+pswd.replace(",", "")+"\n");
 
+            //muda o texto do botão e depois fecha o aplicativo
             add_user_btn.setText("User Created!");
             add_user_btn.setEnabled(false);//desativa o botão
 
@@ -82,6 +84,7 @@ public class RegistrarUsuario extends JDialog {
             });
             timer.setRepeats(false);
             timer.start();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -94,6 +97,7 @@ public class RegistrarUsuario extends JDialog {
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))){
             String data;
+            //tenta encontrar o usuário no banco de dados para evitar replicas antes de salvar
             while ((data = reader.readLine()) != null) {
                 String[] value = data.split(",");
                 if (value.length > 0 && value[0].trim().equalsIgnoreCase(name)) {

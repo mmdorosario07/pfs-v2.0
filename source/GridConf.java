@@ -16,8 +16,8 @@ public class GridConf extends  GridBagConstraints{
             default  -> GridBagConstraints.NONE;
         };
     
-        this.insets = new Insets(5, 5, 5, 5);      // Margem padrão de 5px para não colar tudo
-        this.weightx = 1.0;                        // Dá peso horizontal para permitir o redimensionamento
+        this.insets = new Insets(5, 5, 5, 5);
+        this.weightx = 1.0;      
         this.weighty = 0.0;
     }
 }
