@@ -32,9 +32,4 @@ public class User {
         System.out.println("Player "+id+"@"+name+" changed his password");
         pswd = new_pswd;
     }
-
-
-    
-
-
 }
