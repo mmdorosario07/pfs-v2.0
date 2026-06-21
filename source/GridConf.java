@@ -15,9 +15,9 @@ public class GridConf extends  GridBagConstraints{
             case 'n' -> GridBagConstraints.NONE;
             default  -> GridBagConstraints.NONE;
         };
-    
+
         this.insets = new Insets(5, 5, 5, 5);
-        this.weightx = 1.0;      
+        this.weightx = 1.0;
         this.weighty = 0.0;
     }
 }

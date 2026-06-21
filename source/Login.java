@@ -13,15 +13,12 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import java.io.*;
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 
 public class Login extends JFrame{
 
     ImageIcon icon = new ImageIcon("data/assets/icon.jpg");
     ImageIcon img = new ImageIcon("data/assets/campo.jpg");
-
+    private String[] user = new String[2];
     //sempre qu mecher nos valores de tamanho da tela mude esses valores tambem 
     //para escalar a imagem e ocupar metade da tela
     Image imgred = img.getImage().getScaledInstance(400, 500, Image.SCALE_SMOOTH);
@@ -62,7 +59,6 @@ public class Login extends JFrame{
 
         JButton goto_game = new JButton("Go!");
         loginPanel.add(goto_game, new GridConf(0,3,2,1,'h'));
-        
 
         //Adicionar usuario
         JLabel add_acct = new JLabel("Sem Conta?");
@@ -96,28 +92,34 @@ public class Login extends JFrame{
     };
 
     private void loginToGame(String name, String pswd) {
-        System.out.println("login");
-        String saved_pswd = "12";
-        if (true) {
-            if (pswd.equals(saved_pswd)) {
-                FutQuiz quiz = new FutQuiz();
+        if (getUserdata(name)) {
+            if (pswd.equals(user[1])) {
+                JFrame q = new FutQuiz();
+                q.setVisible(true);
+                setVisible(false);
             }
         } else {
-            goto_game.setText("User dont exist");
+            System.out.println("erro de login");
+            //goto_game.setText("credentials error");
         }
     }
-    private String[] getUserdata(String name) {
+
+    private boolean getUserdata(String name) {
         java.io.File file = new java.io.File("data/user.csv");//Db File
         try (BufferedReader reader = new BufferedReader(new FileReader(file))){
             String data;
             while ((data = reader.readLine()) != null) {
                 String[] value = data.split(",");
-                if (value.length > 0 && value[0].trim().equalsIgnoreCase(name)) return value;
+                if (value.length > 0 && value[0].trim().equalsIgnoreCase(name)) {
+                    user[0] = value[0];
+                    user[1] = value[1];
+                    return true;
+                }
             }
-            
         } catch (Exception e) {
             System.out.println("Erro");
+            e.printStackTrace();
         }
-        return  false;
+        return false;
     }
 }
