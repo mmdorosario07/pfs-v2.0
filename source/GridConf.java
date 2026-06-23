@@ -20,4 +20,5 @@ public class GridConf extends  GridBagConstraints{
         this.weightx = 1.0;
         this.weighty = 0.0;
     }
+    
 }
