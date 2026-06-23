@@ -1,10 +1,10 @@
-cd /home/master/projetos/PFS-v2.0
+cd /home/master/programacao/projetos/pfs-v2.0/source
+echo "compilando"
 
-javac source/Main.java
-mv source/Main.class class-files
+javac *.java
+cd ..
+rm class-files/*.class
+mv source/*.class class-files
 cd class-files
-java main
-
-
-
+java Main
 
