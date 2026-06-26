@@ -18,7 +18,7 @@ public class Login extends JFrame{
 
     ImageIcon icon = new ImageIcon("data/assets/icon.jpg");
     ImageIcon img = new ImageIcon("data/assets/campo.jpg");
-    private String[] user = new String[2];
+    private final String[] user = new String[2];
     //sempre qu mecher nos valores de tamanho da tela mude esses valores tambem 
     //para escalar a imagem e ocupar metade da tela
     Image imgred = img.getImage().getScaledInstance(400, 500, Image.SCALE_SMOOTH);
