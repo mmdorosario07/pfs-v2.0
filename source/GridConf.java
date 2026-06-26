@@ -18,7 +18,26 @@ public class GridConf extends  GridBagConstraints{
 
         this.insets = new Insets(5, 5, 5, 5);
         this.weightx = 1.0;
-        this.weighty = 0.0;
+        this.weighty = 1.0;
+    }
+
+    public GridConf(int col, int line, int colspan, int linespan, char fill, double weightx, double weighty) {
+        this.gridx = col;
+        this.gridy = line;
+        this.gridwidth = colspan;
+        this.gridheight = linespan;
+
+        this.fill = switch (fill) {
+            case 'b' -> GridBagConstraints.BOTH;
+            case 'h' -> GridBagConstraints.HORIZONTAL;
+            case 'v' -> GridBagConstraints.VERTICAL;
+            case 'n' -> GridBagConstraints.NONE;
+            default  -> GridBagConstraints.NONE;
+        };
+
+        this.insets = new Insets(5, 5, 5, 5);
+        this.weightx = weightx;
+        this.weighty = weighty;
     }
 
     public GridConf(int col, int line, int colspan, int linespan, char fill, char anchor) {
@@ -50,7 +69,7 @@ public class GridConf extends  GridBagConstraints{
 
         this.insets = new Insets(5, 5, 5, 5);
         this.weightx = 1.0;
-        this.weighty = 0.0;
+        this.weighty = 1.0;
     }
 
     public GridConf(int col, int line, int colspan, int linespan, char fill, char anchor, double weightx, double weighty) {
