@@ -9,7 +9,8 @@ public class FutQuiz extends JFrame {
     ImageIcon icon = new ImageIcon("data/assets/icon.jpg");
     List<Question> QuestionsList = new ArrayList<>();
     private int question_id;
-    private int p;
+    private int pa = 0;//pontos acumulados
+    private int pv = 3;//pontos de vida
     private JLabel pergunta;
     private JPanel answers;
     private JLabel points;
@@ -50,7 +51,7 @@ public class FutQuiz extends JFrame {
         head.add(exit, new GridConf(0,0,1,1,'b'));
 
         //PONTUAÇÃO
-        points = new JLabel("Pontuação: ");
+        points = new JLabel("Pontuação: " + pa + " Vida: "+pv);
         head.add(points, new GridConf(1,0,1,1,'b'));
 
         //RANKING
@@ -126,16 +127,25 @@ public class FutQuiz extends JFrame {
     }
 
     private void ConfirmAnswer (String btn_txt, String correct_answer){
-        if (btn_txt.equals(correct_answer)) {
-            if (question_id < QuestionsList.size()-1) {
-                question_id ++;
-                System.out.println("Correct!");
+        if (question_id < QuestionsList.size()-1) {
+            if (btn_txt.equals(correct_answer)) {
+                pa++;
+                points.setText("Pontuação: " + pa + " Vida: "+pv);
+                question_id++;
                 updateQuestion();
             } else {
-                System.out.println("Fim!");
+                pv -= 1;
+                if (pv == 0) {
+                    System.out.println("Game Over");
+                } else {
+                    points.setText("Pontuação: " + pa + " Vida: "+pv);
+                    question_id++;
+                    updateQuestion();
+                }
             }
+
         } else {
-            System.out.println("Error!");
+            System.exit(0);
         }
     }
 }
