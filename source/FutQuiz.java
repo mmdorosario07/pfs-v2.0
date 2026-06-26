@@ -145,7 +145,13 @@ public class FutQuiz extends JFrame {
             }
 
         } else {
-            System.exit(0);
+            Timer timer = new Timer(1000, e -> {
+                answers.removeAll();//fecha o dialog
+                answers.revalidate();
+                answers.repaint();
+            });
+            timer.setRepeats(false);
+            timer.start();
         }
     }
 }

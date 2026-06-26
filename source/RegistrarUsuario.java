@@ -79,7 +79,7 @@ public class RegistrarUsuario extends JDialog {
             add_user_btn.setText("User Created!");
             add_user_btn.setEnabled(false);//desativa o botão
 
-            Timer timer = new Timer(1000, e -> {
+            Timer timer = new Timer(500, e -> {
                 RegistrarUsuario.this.dispose();//fecha o dialog
             });
             timer.setRepeats(false);
