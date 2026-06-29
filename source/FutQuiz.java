@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import javax.swing.*;
@@ -11,13 +12,17 @@ public class FutQuiz extends JFrame {
     private int question_id;
     private int pa = 0;//pontos acumulados
     private int pv = 3;//pontos de vida
-    private JLabel pergunta;
-    private JPanel answers;
-    private JLabel points;
-     
+    private final JLabel question;
+    private final JPanel answers;
+    private final JLabel points;
+    private final JPanel game;
+    private final JPanel head;
+    private final String[] opt = {"Reiniciar", "Sair"};
+    private final int MAX_QUESTIONS = 25;
+
+    
     public FutQuiz() {
         getQuestionsList();
-        setSize(600, 450);
         setTitle("Futquizz");
         setIconImage(icon.getImage());
         setResizable(false);
@@ -25,11 +30,11 @@ public class FutQuiz extends JFrame {
         setLayout(new GridBagLayout());
         setLocationRelativeTo(null);
 
-        JPanel head = new JPanel();
+        head = new JPanel();
         head.setLayout(new GridBagLayout());
         head.setBorder(BorderFactory.createLineBorder(Color.blue, 2));
 
-        JPanel game = new JPanel();
+        game = new JPanel();
         game.setLayout(new GridBagLayout());
         game.setBorder(BorderFactory.createLineBorder(Color.blue, 2));
 
@@ -47,11 +52,10 @@ public class FutQuiz extends JFrame {
                 System.exit(0);
             }
         );
-
         head.add(exit, new GridConf(0,0,1,1,'b'));
 
         //PONTUAÇÃO
-        points = new JLabel("Pontuação: " + pa + " Vida: "+pv);
+        points = new JLabel("Pontuação: " + pa + "   Vida: "+pv);
         head.add(points, new GridConf(1,0,1,1,'b'));
 
         //RANKING
@@ -59,20 +63,9 @@ public class FutQuiz extends JFrame {
         head.add(rank, new GridConf(2,0,1,1,'b'));
 
 
-
-
         //Conteudos do "game"
-        JPanel questions = new JPanel();
-        questions.setLayout(new GridBagLayout());
-        game.add(questions, new GridConf(0,0,1,1,'h'));
-
-        JLabel img = new JLabel("IMAGEM");
-        questions.add(img, new GridConf(0,0,1,1,'h'));
-
-        pergunta = new JLabel("Pergunta");
-        questions.add(pergunta, new GridConf(1,0,1,1,'h'));
-
-
+        question = new JLabel("Pergunta");
+        game.add(question, new GridConf(0,0,2,1,'c'));
         //lugar das respostas
         answers = new JPanel();
         answers.setLayout(new GridBagLayout());
@@ -88,70 +81,95 @@ public class FutQuiz extends JFrame {
             String data;
             while ((data = reader.readLine()) != null) {
                 String[] value = data.split(",");
-                // Forma correta e otimizada:
-                QuestionsList.add(new Question(
-                    value[1], 
-                    value[2], 
-                    value[3], 
-                    value[4], 
-                    value[5], 
-                    value[6]
-                ));
+                if (value.length >= 7) { 
+                    QuestionsList.add(new Question(
+                        value[1],//Pergunta
+                        value[2], //Resposta 1
+                        value[3], //Resposta 2
+                        value[4], //Resposta 3
+                        value[5], //Resposta 4
+                        value[6] /*Resposta correta*/
+                    ));
+                }
             }
         } catch (Exception e) {
-            System.out.println("Erro");
+            System.out.println("Erro ao ler o csv");
         }
 
         Collections.shuffle(QuestionsList);//Randomiza as perguntas
     }
 
     private void updateQuestion() {
-        answers.removeAll();//remover todos os botões
+        //limpa o ecrã de botões
+        answers.removeAll();
+        answers.revalidate();
+        answers.repaint();
+
         Question q = QuestionsList.get(question_id);//recebe uma pergunta
 
-        pergunta.setText(q.getQuestion());//muda o valor da label pergunta
+        question.setText("<html><body style='width: 400px; text-align: center;'>" + q.getQuestion() + "</body></html>");//muda o valor da label pergunta
 
-        String[] tmp = q.guetAnswers();//ignora...
-        String[][] lines = {{tmp[0], tmp[1]}, {tmp[2], tmp[3]}};//apenas distribui as respostas por 2 linhas
+        List<String> tmp = Arrays.asList(q.guetAnswers());//ignora...
+        Collections.shuffle(tmp);
 
-        for (int x = 1; x < 3; x++) {
-            for (int y = 1; y < 3; y++) {
-                JButton AnswerBtn = new JButton(lines[x-1][y-1]);
-                answers.add(AnswerBtn, new GridConf(x-1, y-1, 1,1,'b','n', 1, 1));
-                AnswerBtn.addActionListener(
-                    e -> ConfirmAnswer(AnswerBtn.getText(), q.getCorrectAnswer())
-                );
-            }
+        char[] alineas = {'a', 'b', 'c', 'd'};
+        for (int x = 0; x < 4; x++) {
+            String ANSWER = tmp.get(x);
+            JButton AnswerBtn = new JButton("<html><body style='width: 400px;'>"+alineas[x]+") "+ ANSWER + "</body></html>");
+            answers.add(AnswerBtn, new GridConf(0, x, 1,1,'h','n', 1, 1));
+            //deixar o texto 
+            AnswerBtn.setHorizontalAlignment(SwingConstants.LEFT);
+            AnswerBtn.addActionListener(
+                e -> ConfirmAnswer(ANSWER, q.getCorrectAnswer())
+            );
         }
-
     }
 
     private void ConfirmAnswer (String btn_txt, String correct_answer){
-        if (question_id < QuestionsList.size()-1) {
-            if (btn_txt.equals(correct_answer)) {
-                pa++;
-                points.setText("Pontuação: " + pa + " Vida: "+pv);
-                question_id++;
+        question_id++;
+        if (question_id > MAX_QUESTIONS) {
+            int x = JOptionPane.showOptionDialog(
+                this, 
+                "Chegaste ao fim do jogo!","Congratulations",
+                JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
+                null , opt, opt[0]);
+            if (x == 0) {
+                Collections.shuffle(QuestionsList);
+                question_id = 0;
+                pv = 3;
+                pa = 0;
                 updateQuestion();
-            } else {
-                pv -= 1;
-                if (pv == 0) {
-                    System.out.println("Game Over");
-                } else {
-                    points.setText("Pontuação: " + pa + " Vida: "+pv);
-                    question_id++;
-                    updateQuestion();
-                }
+            } else if (x == 1) {
+                System.exit(0);
             }
+            
+        } else if (correct_answer.equals(btn_txt)) {
+            pa++;
+            updateQuestion();
 
+            //o que fazer caso a resposta for a certa
+        } else if (pv == 1) {
+            //O que fazer quando o jogo chegar ao fim
+            pv--;
+            int x = JOptionPane.showOptionDialog(
+                this, 
+                "Vc perdeu!","Se Fudeu!",
+                JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE
+                ,null , opt, opt[0]);
+            if (x == 0) {
+                Collections.shuffle(QuestionsList);
+                question_id = 0;
+                pv = 3;
+                pa = 0;
+                updateQuestion();
+            } else if (x == 1) {
+                System.exit(0);
+            }
         } else {
-            Timer timer = new Timer(1000, e -> {
-                answers.removeAll();//fecha o dialog
-                answers.revalidate();
-                answers.repaint();
-            });
-            timer.setRepeats(false);
-            timer.start();
+            pv--;
+            JOptionPane.showMessageDialog(this, "Vc Errou! \n Perdeste Uma vida","Se Fudeu!", JOptionPane.ERROR_MESSAGE);
+            updateQuestion();
         }
+        points.setText("Pontuação: "+pa+"   Vida: "+pv);
     }
 }
