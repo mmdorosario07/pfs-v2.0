@@ -67,9 +67,14 @@ public class Login extends JFrame{
         loginPanel.add(add_user, new GridConf(1,4,1,1,'h'));
         add_user.addActionListener(create_user);
         //Ver ranking
-        JButton ranking = new JButton("Ver Ranking Global");
-        loginPanel.add(ranking, new GridConf(0,5,2,1,'h'));
-
+        JButton rank = new JButton("Ver Ranking Global");
+        loginPanel.add(rank, new GridConf(0,5,2,1,'h'));
+        rank.addActionListener(
+            e -> {
+                JFrame tmp = new Ranking();
+                tmp.setVisible(true);
+            }
+        );
         //por fim adicionar os elementos
         add(imgJPanel);
         add(loginPanel);

@@ -58,7 +58,12 @@ public class FutQuiz extends JFrame {
         JButton rank = new JButton("Ranking");
         head.add(rank, new GridConf(2,0,1,1,'b'));
 
-
+        rank.addActionListener(
+            e -> {
+                JFrame tmp = new Ranking();
+                tmp.setVisible(true);
+            }
+        );
 
         //Conteudos do "game"
         JPanel questions = new JPanel();
