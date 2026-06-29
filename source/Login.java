@@ -123,7 +123,6 @@ public class Login extends JFrame{
             }
         } catch (Exception e) {
             System.out.println("Erro");
-            e.printStackTrace();
         }
         return false;
     }
