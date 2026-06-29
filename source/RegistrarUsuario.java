@@ -1,3 +1,4 @@
+import java.awt.Font;
 import java.awt.GridBagLayout;
 import java.awt.event.*;
 import java.io.BufferedReader;
@@ -9,6 +10,7 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 import javax.swing.Timer;
 
 public class RegistrarUsuario extends JDialog {
@@ -19,28 +21,34 @@ public class RegistrarUsuario extends JDialog {
         setSize(400, 200);
         setResizable(false);
         setLocationRelativeTo(null);//abre no meio
+        setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 
         //parte gráfica
         JLabel loginLabel = new JLabel("Criar Conta");//titulo
         add(loginLabel, new GridConf(0,0,2,1, 'h'));
+        loginLabel.setFont(new Font(Font.SERIF,Font.BOLD, 30));
+        loginLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
         //Username Field
         JLabel name_field = new JLabel("Nome");//depois adicionar icones ilustrativos
-        add(name_field, new GridConf(0,1,1,1,'n'));
+        add(name_field, new GridConf(0,1,1,1,'h'));
         JTextField name_input = new JTextField(20);
-        add(name_input, new GridConf(1,1,1,1,'n'));
+        name_field.setHorizontalAlignment(SwingConstants.LEFT);
+        add(name_input, new GridConf(1,1,1,1,'h'));
 
         //Password field
         JLabel pswd_field_1 = new JLabel("Password");
-        add(pswd_field_1, new GridConf(0,2,1,1,'n'));
+        pswd_field_1.setHorizontalAlignment(SwingConstants.LEFT);
+        add(pswd_field_1, new GridConf(0,2,1,1,'h'));
         JPasswordField pswd_input_1 = new JPasswordField(20);
-        add(pswd_input_1, new GridConf(1,2,1,1,'n'));
+        add(pswd_input_1, new GridConf(1,2,1,1,'h'));
 
         //Confirmar Password field
         JLabel pswd_field_2 = new JLabel("Confirmar Password");
-        add(pswd_field_2, new GridConf(0,3,1,1,'n'));
+        pswd_field_2.setHorizontalAlignment(SwingConstants.LEFT);
+        add(pswd_field_2, new GridConf(0,3,1,1,'h'));
         JPasswordField pswd_input_2 = new JPasswordField(20);
-        add(pswd_input_2, new GridConf(1,3,1,1,'n'));
+        add(pswd_input_2, new GridConf(1,3,1,1,'h', 'w', 1, 0));
 
         //Botão confirmar
         add_user_btn = new JButton("Criar Conta");
@@ -86,7 +94,7 @@ public class RegistrarUsuario extends JDialog {
             timer.start();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Erro");
         }
     }
 

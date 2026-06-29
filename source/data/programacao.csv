@@ -1,0 +1,201 @@
+id(numero),pergunta,resposa1,resposta2,resposta3,reposta4,resposta certa
+1,O que o método 'append()' faz em uma lista Python?,Remove o último elemento,Adiciona um elemento ao final,Ordena a lista,Inverte a lista,Adiciona um elemento ao final
+2,Qual palavra-chave é usada para definir uma função em Python?,func,define,def,function,def
+3,Qual é o tipo de dado de x = 5.5 em Python?,int,str,boolean,float,float
+4,Como se inicia um comentário de linha única em Python?,//,/*,#,--,#
+5,Qual operador é usado para exponenciação em Python?,^,**,*,pow,**
+6,Qual das seguintes estruturas em Python é imutável?,Lista,Dicionário,Conjunto (Set),Tupla,Tupla
+7,O que o método 'split()' faz com uma string em Python?,Converte para maiúsculas,Divide a string em uma lista,Remove espaços extras,Inverte a string,Divide a string em uma lista
+8,Como você converte um número para uma string em Python?,str(),toString(),int(),cast(str),str()
+9,Qual função em Python é usada para obter o comprimento de uma lista?,length(),size(),count(),len(),len()
+10,Qual é o resultado de 10 // 3 em Python?,3.333,3,1,0,3
+11,O que faz a palavra-chave 'lambda' em Python?,Define uma classe,Inicia um loop,Cria uma função anônima,Importa um módulo,Cria uma função anônima
+12,Qual biblioteca padrão do Python é usada para manipulação de expressões regulares?,regex,re,expression,string,re
+13,Como você remove um item de um dicionário em Python usando sua chave?,remove(),delete(),pop(),discard(),pop()
+14,O que o método 'join()' faz em Python?,Une duas tabelas,Junta elementos de uma lista em uma string,Adiciona elementos a um set,Interrompe uma thread,Junta elementos de uma lista em uma string
+15,Qual cláusula é usada junto com 'try' para capturar exceções em Python?,catch,except,throws,error,except
+16,Qual destas funções remove e retorna o último elemento de uma lista em Python?,remove(),pop(),discard(),delete(),pop()
+17,Qual é o valor padrão retornado por uma função em Python que não possui a instrução 'return'?,0,False,None,void,None
+18,Como importar um módulo chamado 'math' em Python?,include math,import math,require('math'),using math,import math
+19,O que faz a função 'zip()' em Python?,Agrupa elementos de múltiplos iteráveis,Comprime um arquivo,Deleta variáveis,Ordena uma lista,Agrupa elementos de múltiplos iteráveis
+20,Qual é a saída de bool([]) em Python?,True,False,None,Erro,False
+21,Qual comando desfaz a última alteração em uma lista sem remover o elemento?,undo(),revert(),Não existe esse comando,back(),Não existe esse comando
+22,Como verificar se a chave 'nome' existe no dicionário 'usuario' em Python?,'nome' in usuario,usuario.has('nome'),usuario.contains('nome'),"exists('nome', usuario)",'nome' in usuario
+23,O que faz o método 'strip()' em uma string Python?,Inverte a string,Remove espaços em branco no início e no fim,Divide a string,Substitui caracteres,Remove espaços em branco no início e no fim
+24,Qual palavra-chave impede que uma classe seja herdada em Python?,final,static,private,Não há palavra-chave nativa (usa-se convenção ou meta),Não há palavra-chave nativa (usa-se convenção ou meta)
+25,O que o operador 'is' faz em Python?,Compara valores,Compara identidades de objetos (referência),Verifica o tipo,Atribui um valor,Compara identidades de objetos (referência)
+26,Qual palavra-chave introduzida no ES6 permite declarar variáveis com escopo de bloco?,var,let,global,int,let
+27,Como se escreve 'Hello World' em um alerta no JavaScript?,alertBox('Hello World'),msg('Hello World'),alert('Hello World'),console.log('Hello World'),alert('Hello World')
+28,Qual operador é usado para verificar igualdade estrita de valor e tipo em JavaScript?,==,=,===,equals,===
+29,Como você cria uma função em JavaScript?,function minhaFuncao(),function:minhaFuncao(),def minhaFuncao(),new function minhaFuncao(),function minhaFuncao()
+30,Como se adiciona um comentário de várias linhas em JavaScript?,// coment //,<!-- coment -->,/* coment */,'' coment '',/* coment */
+31,Qual é a saída de console.log(typeof []) em JavaScript?,'array','object','list','null','object'
+32,Qual método converte uma string JSON em um objeto JavaScript?,JSON.stringify(),JSON.parse(),JSON.toObject(),JSON.convert(),JSON.parse()
+33,Qual método converte um objeto JavaScript em uma string JSON?,JSON.stringify(),JSON.parse(),JSON.toString(),JSON.serialize(),JSON.stringify()
+34,Como você adiciona um novo elemento ao final de um array em JavaScript?,push(),pop(),shift(),unshift(),push()
+35,Qual método remove o primeiro elemento de um array em JavaScript?,pop(),push(),shift(),unshift(),shift()
+36,O que significa a sigla DOM em desenvolvimento web?,Document Object Model,Data Object Management,Digital Ordinance Module,Document Oriented Multi,Document Object Model
+37,Qual é o resultado de '5' + 5 em JavaScript?,10,55,Error,NaN,55
+38,Qual é o resultado de '5' - 5 em JavaScript?,0,55,NaN,Error,0
+39,Qual palavra-chave é usada para criar uma constante em JavaScript?,const,constant,let,var,const
+40,Como selecionar um elemento HTML pelo seu ID usando JavaScript?,document.getElementByClass(),document.querySelector(),document.getElementById(),document.findId(),document.getElementById()
+41,Qual objeto nativo do JavaScript é usado para operações matemáticas?,Math,Mathematics,Calc,Numbers,Math
+42,Qual é a saída de console.log(isNaN('Hello'))?,false,true,undefined,null,true
+43,Qual método nativo do JavaScript remove os espaços em branco do início e fim de uma string?,strip(),clean(),trim(),replace(),trim()
+44,Qual o evento disparado quando o usuário clica em um elemento HTML?,onmouseover,onchange,onclick,onsubmit,onclick
+45,Como você declara uma arrow function em JavaScript?,() => {},function() =>,=> {},def (),() => {}
+46,O que faz a expressão 'use strict' no início de um script JavaScript?,"Ativa o modo estrito, prevenindo erros silenciosos",Importa bibliotecas externas,Obriga o uso de TypeScript,Otimiza a memória automaticamente,"Ativa o modo estrito, prevenindo erros silenciosos"
+47,Qual é o resultado de true && false em JavaScript?,true,false,null,undefined,false
+48,Qual método de array cria um novo array com todos os elementos que passam em um teste?,map(),filter(),reduce(),forEach(),filter()
+49,Qual método executa uma função para cada elemento de um array?,map(),filter(),forEach(),every(),forEach()
+50,Qual operador é conhecido como operador de coalescência nula no JS?,&&,||,?.,??,??
+51,Qual tag HTML é usada para criar uma quebra de linha?,<lb>,<br>,<break>,<hr>,<br>
+52,Qual propriedade CSS controla o tamanho do texto?,text-size,font-style,font-size,text-style,font-size
+53,O que a sigla HTML significa?,HyperText Markup Language,HighTech Markup Language,HyperLinks and Text Model,HyperText Multi Language,HyperText Markup Language
+54,Qual tag HTML é usada para renderizar a imagem?,<picture>,<img>,<src>,<image>,<img>
+55,Qual atributo HTML especifica um texto alternativo para uma imagem se ela não puder ser exibida?,title,alt,src,longdesc,alt
+56,Qual propriedade CSS muda a cor do plano de fundo de um elemento?,color,background-color,bgcolor,background-image,background-color
+57,Qual tag é usada para criar uma lista ordenada em HTML?,<ul>,<ol>,<li>,<list>,<ol>
+58,Qual tag cria um link ou hiperligação em HTML?,<link>,<a>,<href>,<url>,<a>
+59,Qual propriedade CSS é usada para alterar a fonte de um elemento?,font-weight,font-style,font-family,font-type,font-family
+60,Como fazer um texto ficar em negrito usando CSS?,font-weight: bold;,font: bold;,text-style: bold;,font-variant: bold;,font-weight: bold;
+61,Qual seletor CSS seleciona todos os elementos com uma classe específica?,#,.,*,@,.
+62,Qual seletor CSS seleciona um elemento com um ID específico?,.,#,*,:,#
+63,Qual valor da propriedade 'display' ativa o modelo Flexbox em CSS?,grid,block,inline,flex,flex
+64,Qual propriedade CSS define o espaçamento interno de um elemento?,margin,padding,border,spacing,padding
+65,Qual propriedade CSS define o espaçamento externo de um elemento?,margin,padding,border,gap,margin
+66,"Em HTML, qual tag define o título principal da página, exibido na aba do navegador?",<head>,<h1>,<title>,<meta>,<title>
+67,Qual atributo HTML abre um link em uma nova aba do navegador?,target='_self',target='_new',target='_blank',href='_blank',target='_blank'
+68,Qual propriedade CSS é usada para centralizar horizontalmente os itens de um contêiner Flexbox?,align-items,justify-content,text-align,flex-direction,justify-content
+69,Qual propriedade CSS adiciona uma sombra a um elemento?,text-shadow,box-shadow,shadow,element-shadow,box-shadow
+70,Como você oculta um elemento no CSS sem remover o espaço que ele ocupa?,display: none;,visibility: hidden;,opacity: 1;,display: block;,visibility: hidden;
+71,Qual tag HTML é usada para incorporar código JavaScript interno?,<javascript>,<script>,<js>,<code-js>,<script>
+72,Qual tag HTML é usada para criar uma tabela?,<table>,<grid>,<tab>,<list>,<table>
+73,"No CSS Box Model, o que fica diretamente entre o padding e a margin?",Content,Border,Outline,Gap,Border
+74,Qual seletor CSS é usado para aplicar estilos quando o mouse passa por cima de um elemento?,:visited,:focus,:active,:hover,:hover
+75,Qual unidade de medida CSS é relativa ao tamanho da fonte do elemento raiz?,em,rem,px,vh,rem
+76,Qual comando SQL é usado para extrair dados de um banco de dados?,EXTRACT,GET,SELECT,OPEN,SELECT
+77,Qual cláusula SQL é usada para filtrar as linhas retornadas por uma consulta?,HAVING,WHERE,ORDER BY,GROUP BY,WHERE
+78,Como você adiciona um novo registro a uma tabela em SQL?,ADD NEW,INSERT INTO,UPDATE,MAKE,INSERT INTO
+79,Qual comando SQL é usado para modificar dados existentes em uma tabela?,MODIFY,SAVE,CHANGE,UPDATE,UPDATE
+80,Qual comando SQL remove completamente uma tabela e sua estrutura do banco de dados?,DELETE,REMOVE,DROP TABLE,CLEAR,DROP TABLE
+81,O que significa a sigla SQL?,Structured Query Language,Strong Question Language,Sequential Query List,Standard Query Logic,Structured Query Language
+82,Qual tipo de JOIN retorna apenas os registros que possuem correspondência em ambas as tabelas?,LEFT JOIN,RIGHT JOIN,INNER JOIN,FULL JOIN,INNER JOIN
+83,Qual função SQL é usada para contar o número de linhas em uma tabela?,SUM(),COUNT(),TOTAL(),NUMBER(),COUNT()
+84,Qual cláusula SQL é usada para ordenar os resultados de uma consulta?,SORT BY,ORDER BY,GROUP BY,ALIGN BY,ORDER BY
+85,O que a restrição PRIMARY KEY garante em uma tabela?,Que a coluna aceite valores nulos,Que a coluna tenha valores únicos e não nulos,Que a tabela seja criptografada,Que a coluna seja um número decimal,Que a coluna tenha valores únicos e não nulos
+86,Qual restrição cria um vínculo entre duas tabelas no banco de dados relacional?,UNIQUE KEY,CHECK KEY,FOREIGN KEY,PRIMARY KEY,FOREIGN KEY
+87,Qual função de agregação SQL calcula a média de valores numéricos?,AVG(),MEAN(),MEDIAN(),SUM(),AVG()
+88,Como você remove todas as linhas de uma tabela sem excluir a tabela em si (e sem gerar logs individuais de linha)?,DROP TABLE,TRUNCATE TABLE,DELETE TABLE,REMOVE * FROM,TRUNCATE TABLE
+89,Qual cláusula SQL é usada para filtrar grupos criados pela cláusula GROUP BY?,WHERE,HAVING,ORDER BY,DISTINCT,HAVING
+90,O que faz a palavra-chave DISTINCT em um comando SELECT?,Retorna apenas valores diferentes/únicos,Ordena os valores,Criptografa o resultado,Soma os valores,Retorna apenas valores diferentes/únicos
+91,Qual comando SQL é usado para conceder privilégios a um usuário?,GRANT,REVOKE,ALLOW,PERMIT,GRANT
+92,Qual operador SQL é usado para buscar por um padrão específico em uma coluna de texto?,BETWEEN,LIKE,IN,MATCH,LIKE
+93,O que significa a sigla ACID em bancos de dados relacionais?,"Atomicity, Consistency, Isolation, Durability","Access, Control, Index, Data","Automated, Combined, Integrated, Distributed","Accuracy, Complexity, Integrity, Delivery","Atomicity, Consistency, Isolation, Durability"
+94,Qual tipo de banco de dados é o MongoDB?,Relacional (SQL),Não relacional (NoSQL) orientado a documentos,Hierárquico,Rede,Não relacional (NoSQL) orientado a documentos
+95,Como simular o operador lógico 'OU' em uma cláusula WHERE do SQL?,AND,OR,XOR,NOT,OR
+96,Qual comando SQL adiciona uma nova coluna a uma tabela existente?,UPDATE TABLE,ALTER TABLE,INSERT COLUMN,MODIFY TABLE,ALTER TABLE
+97,Qual o objetivo principal de criar um INDEX em uma tabela SQL?,Garantir a segurança dos dados,Acelerar a velocidade de consulta de dados,Reduzir o tamanho do arquivo do banco,Permitir a exclusão em massa,Acelerar a velocidade de consulta de dados
+98,Em qual linguagem o comando 'COMMIT' pertence?,DML,DDL,DCL,TCL,TCL
+99,Qual das seguintes opções é um exemplo de banco de dados relacional?,Redis,Cassandra,PostgreSQL,Neo4j,PostgreSQL
+100,Qual comando desfaz as alterações feitas na transação atual?,COMMIT,ROLLBACK,SAVEPOINT,UNDO,ROLLBACK
+101,"Qual estrutura de dados funciona no princípio LIFO (Last In, First Out)?",Fila (Queue),Pilha (Stack),Árvore (Tree),Grafo (Graph),Pilha (Stack)
+102,"Qual estrutura de dados funciona no princípio FIFO (First In, First Out)?",Pilha (Stack),Fila (Queue),Lista Ligada,Tabela Hash,Fila (Queue)
+103,Qual é a complexidade de tempo no pior caso para buscar um elemento em uma Árvore Binária de Busca balanceada?,O(1),O(n),O(log n),O(n log n),O(log n)
+104,Qual algoritmo de ordenação divide repetidamente uma lista ao meio e depois mescla as sublistas ordenadas?,Bubble Sort,Quick Sort,Insertion Sort,Merge Sort,Merge Sort
+105,Qual a complexidade de tempo do pior caso para o algoritmo de ordenação Bubble Sort?,O(n),O(log n),O(n²),O(n log n),O(n²)
+106,"Em análise de algoritmos, o que representa a notação Big O?",O tempo exato de execução,O limite superior da complexidade de tempo ou espaço (pior caso),O melhor caso de execução,O número de linhas de código,O limite superior da complexidade de tempo ou espaço (pior caso)
+107,Qual estrutura de dados utiliza uma função de espalhamento para mapear chaves para valores?,Lista Duplamente Ligada,Tabela Hash (Hash Table),Heap,Grafo,Tabela Hash (Hash Table)
+108,O que caracteriza uma Lista Ligada (Linked List)?,Elementos guardados em posições de memória consecutivas,Cada elemento (nó) contém o dado e uma referência para o próximo nó,Acesso aleatório aos elementos em tempo O(1),Uma estrutura estática de tamanho fixo,Cada elemento (nó) contém o dado e uma referência para o próximo nó
+109,Qual algoritmo é mais eficiente para buscar um elemento em um array já ordenado?,Busca Linear,Busca Binária,Busca em Profundidade (DFS),Busca em Largura (BFS),Busca Binária
+110,Qual é a complexidade de tempo da Busca Binária?,O(n),O(n²),O(log n),O(1),O(log n)
+111,O que acontece em uma colisão em uma Tabela Hash?,O programa trava imediatamente,Duas chaves diferentes geram o mesmo índice hash,A memória do computador acaba,O banco de dados apaga o registro,Duas chaves diferentes geram o mesmo índice hash
+112,Qual estrutura de dados é ideal para implementar a recursividade no sistema?,Fila,Pilha,Grafo,Matriz,Pilha
+113,Como se chama uma função que chama a si mesma?,Função anônima,Função recursiva,Função estática,Função de callback,Função recursiva
+114,Qual tipo de grafo possui arestas com direções definidas?,Grafo Não-Direcionado,Grafo Direcionado (Dígrafo),Grafo Completo,Grafo Bipartido,Grafo Direcionado (Dígrafo)
+115,Qual algoritmo de busca em grafos explora o máximo possível ao longo de cada ramo antes de retroceder (backtracking)?,BFS (Busca em Largura),DFS (Busca em Profundidade),Algoritmo de Dijkstra,Kruskal,DFS (Busca em Profundidade)
+116,Qual algoritmo é amplamente utilizado para encontrar o caminho mais curto entre nós em um grafo com pesos positivos?,Algoritmo de Dijkstra,Algoritmo de Prim,Bubble Sort,Busca Linear,Algoritmo de Dijkstra
+117,Qual a complexidade de tempo para inserir um elemento no início de um array dinâmico (com redimensionamento e deslocamento)?,O(1),O(log n),O(n),O(n²),O(n)
+118,O que é um 'ponteiro' na ciência da computação?,Um caractere especial na tela,Uma variável que armazena o endereço de memória de outra variável,O cursor do mouse,Um tipo de loop,Uma variável que armazena o endereço de memória de outra variável
+119,Qual estrutura de dados garante que os elementos pai sejam sempre maiores (ou menores) que os elementos filhos?,Pilha,Fila,Heap,Tabela Hash,Heap
+120,Qual é a complexidade de tempo para acessar um elemento por índice em um array comum?,O(1),O(n),O(log n),O(n²),O(1)
+121,Qual a principal desvantagem da Busca Linear em comparação com a Busca Binária?,É muito complexa de implementar,Requer que os dados estejam ordenados obrigatoriamente,É ineficiente para grandes volumes de dados (tempo O(n)),Usa muita memória RAM,É ineficiente para grandes volumes de dados (tempo O(n))
+122,O que é uma árvore binária cheia?,Uma árvore onde cada nó tem exatamente 0 ou 2 filhos,Uma árvore onde todos os nós têm 3 filhos,Uma árvore sem raiz,Uma árvore com apenas um nó,Uma árvore onde cada nó tem exatamente 0 ou 2 filhos
+123,"No pior caso, qual a complexidade do algoritmo Quicksort (sem otimizações de pivô)?",O(n log n),O(n),O(n²),O(1),O(n²)
+124,Qual estrutura de dados linear permite inserções e remoções eficientes em ambas as extremidades?,Pilha,Fila comum,Deque (Double-ended queue),Árvore,Deque (Double-ended queue)
+125,Qual estratégia algorítmica resolve um subproblema apenas uma vez e armazena o resultado para uso futuro?,Dividir para Conquistar,Programação Dinâmica,Algoritmo Ambicioso (Greedy),Força Bruta,Programação Dinâmica
+126,Qual pilar da POO esconde os detalhes internos de uma classe e expõe apenas o necessário?,Herança,Polimorfismo,Encapsulamento,Abstração,Encapsulamento
+127,"Como se chama a capacidade de um objeto assumir várias formas (por exemplo, um método com o mesmo nome se comportar diferente)?",Polimorfismo,Encapsulamento,Herança,Abstração,Polimorfismo
+128,Qual palavra-chave em Java/C# indica que uma classe está herdando de outra?,implements,extends (ou ':' em C#),inherits,super,extends (ou ':' em C#)
+129,O que é um 'Construtor' em Programação Orientada a Objetos?,Um método especial chamado automaticamente ao instanciar um objeto,Uma ferramenta externa para criar código,Uma palavra-chave para deletar objetos,Um tipo de dados numérico,Um método especial chamado automaticamente ao instanciar um objeto
+130,Qual modificador de acesso permite que um membro seja acessado apenas dentro da própria classe?,public,protected,private,internal,private
+131,Uma classe que não pode ser instanciada diretamente e serve apenas como base para outras classes é chamada de:,Classe Estática,Classe Abstrata,Classe Final,Interface,Classe Abstrata
+132,"Qual palavra-chave é usada para criar uma instância (objeto) de uma classe em Java, C# e C++?",create,make,new,alloc,new
+133,O que é uma Interface na POO?,A tela visual do programa,Um contrato que define métodos que uma classe deve implementar,Uma classe que possui apenas atributos privados,O interpretador do código,Um contrato que define métodos que uma classe deve implementar
+134,Qual modificador de acesso torna um membro visível na própria classe e em suas subclasses?,private,protected,public,package-private,protected
+135,O que significa 'Sobrecarga de Método' (Method Overloading)?,"Ter múltiplos métodos com o mesmo nome, mas assinaturas/parâmetros diferentes",Substituir o comportamento de um método da classe pai na classe filha,Criar um método que consome muita memória,Excluir um método em tempo de execução,"Ter múltiplos métodos com o mesmo nome, mas assinaturas/parâmetros diferentes"
+136,O que significa 'Sobrescrita de Método' (Method Overriding)?,Mudar o nome de um método,Redefinir em uma subclasse um método que foi declarado na superclasse,Chamar o mesmo método várias vezes,Criar um método sem corpo,Redefinir em uma subclasse um método que foi declarado na superclasse
+137,Qual é o valor padrão de uma referência de objeto não inicializada em Java e C#?,void,0,false,null,null
+138,Qual palavra-chave é usada por um objeto para se referir a si mesmo dentro de um método?,self,this,me,parent,this
+139,Qual palavra-chave em Java ou C# impede que uma classe seja herdada?,static,final (Java) / sealed (C#),abstract,const,final (Java) / sealed (C#)
+140,Qual palavra-chave em Java é usada para referenciar membros da superclasse (classe pai)?,this,parent,super,base,super
+141,O que faz o 'Garbage Collector' em linguagens como Java e C#?,Organiza os arquivos de código,Gerencia e libera automaticamente a memória de objetos não mais utilizados,Detecta erros de sintaxe,Compila o código-fonte,Gerencia e libera automaticamente a memória de objetos não mais utilizados
+142,O que é uma classe estática (ou membros estáticos)?,"Membros que pertencem à classe em si, e não a instâncias específicas",Membros que não podem ser alterados,Uma classe que não ocupa espaço na memória,Uma classe que só funciona na web,"Membros que pertencem à classe em si, e não a instâncias específicas"
+143,Qual linguagem suporta herança múltipla de classes de forma direta?,Java,C#,C++,PHP,C++
+144,O que é um Objeto na POO?,O arquivo de código fonte compilado,Uma instância de uma Classe,Um tipo primitivo como int,Uma função global,Uma instância de uma Classe
+145,"Em Java, qual classe é a ancestral direta ou indireta de absolutamente todas as outras classes?",String,Main,Object,System,Object
+146,O que define o conceito de Acoplamento?,O nível de interdependência entre os módulos/classes de um sistema,A quantidade de linhas de uma classe,O tempo de carregamento da aplicação,O número de objetos instanciados,O nível de interdependência entre os módulos/classes de um sistema
+147,Qual princípio preconiza o baixo acoplamento e a alta...?,Abstração,Coesão,Herança,Polimorfismo,Coesão
+148,Como é conhecido o mecanismo de criar uma classe a partir de outra preexistente aproveitando seus membros?,Polimorfismo,Encapsulamento,Herança,Injeção,Herança
+149,Qual palavra-chave em C++ é usada para liberar memória alocada dinamicamente com o comando 'new'?,free,delete,remove,clear,delete
+150,O que é um método virtual em linguagens como C++ e C#?,Um método executado na nuvem,Um método que pode ser sobrescrito em uma classe derivada,Um método privado obrigatório,Um método estático,Um método que pode ser sobrescrito em uma classe derivada
+151,Qual comando Git inicializa um novo repositório local em uma pasta?,git start,git setup,git init,git create,git init
+152,Qual comando Git adiciona arquivos específicos ao 'staging area' para o próximo commit?,git add,git commit,git push,git save,git add
+153,Qual comando Git registra permanentemente as alterações do staging area no histórico local?,git push,git commit -m 'mensagem',git save,git upload,git commit -m 'mensagem'
+154,Qual comando Git envia os commits locais para um repositório remoto?,git pull,git fetch,git push,git upload,git push
+155,Qual comando Git baixa o histórico do repositório remoto e o mescla imediatamente com a branch atual?,git pull,git fetch,git clone,git merge,git pull
+156,Como clonar um repositório Git remoto existente para a sua máquina local?,git copy [url],git download [url],git clone [url],git fork [url],git clone [url]
+157,"Qual comando exibe o status atual do repositório, incluindo arquivos modificados e não rastreados?",git log,git status,git check,git diff,git status
+158,Qual comando Git mostra o histórico completo de commits realizados no repositório?,git history,git log,git status,git record,git log
+159,Como criar e alternar imediatamente para uma nova branch chamada 'feature'?,git branch feature,git checkout -b feature,git switch feature,git new branch feature,git checkout -b feature
+160,Qual comando Git combina as alterações de uma branch para a branch atual?,git combine,git join,git merge,git blend,git merge
+161,O que é um 'Merge Conflict' no Git?,Um erro quando o servidor remoto cai,Quando alterações conflitantes são feitas na mesma linha do mesmo arquivo por pessoas diferentes,Quando o Git ultrapassa o limite de armazenamento,Um erro de compilação do código Java,Quando alterações conflitantes são feitas na mesma linha do mesmo arquivo por pessoas diferentes
+162,Qual arquivo diz ao Git quais arquivos ou pastas ele deve ignorar e nunca rastrear?,.gitconfig,.gitignore,ignore.txt,.gitenv,.gitignore
+163,Qual plataforma online é amplamente utilizada para hospedar repositórios Git remotos?,DockerHub,NPM,GitHub,StackOverflow,GitHub
+164,"Qual comando desfaz temporariamente as alterações locais não salvas, guardando-as em uma pilha para uso posterior?",git stash,git reset,git clean,git revert,git stash
+165,"Qual comando Git altera permanentemente o HEAD local para um commit específico, descartando alterações?",git reset --hard,git revert,git checkout,git clean,git reset --hard
+166,Qual o comando usado para ver as diferenças textuais entre o código atual e o último commit?,git status,git diff,git log,git show,git diff
+167,Qual a branch principal padrão historicamente criada no Git (e hoje frequentemente chamada de 'main')?,master,primary,root,dev,master
+168,O que o comando 'git fetch' faz?,Baixa as novidades do servidor remoto mas não as mescla no código local,Apaga os arquivos locais,Envia código para produção,Mescla branches locais,Baixa as novidades do servidor remoto mas não as mescla no código local
+169,Qual comando cria uma cópia de um repositório de outro usuário na sua própria conta do GitHub (via interface web)?,Clone,Pull Request,Fork,Push,Fork
+170,O que é um Pull Request (ou Merge Request)?,Uma solicitação para puxar código do servidor,Uma proposta formal para mesclar as alterações de uma branch em outra branch no repositório remoto,Um erro crítico de segurança,Uma ferramenta de chat integrada ao Git,Uma proposta formal para mesclar as alterações de uma branch em outra branch no repositório remoto
+171,Qual comando Git aplica um commit específico de uma branch em outra branch?,git merge,git cherry-pick,git clone,git push,git cherry-pick
+172,Qual comando remove arquivos não rastreados do diretório de trabalho local?,git clean,git reset,git rm,git purge,git clean
+173,Quem criou o sistema de controle de versão Git?,Bill Gates,Mark Zuckerberg,Linus Torvalds,James Gosling,Linus Torvalds
+174,O que o comando 'git commit --amend' faz?,Cria uma nova branch,Modifica o último commit feito (mensagem ou conteúdo adicionado),Exclui o histórico de commits,Conecta ao repositório remoto,Modifica o último commit feito (mensagem ou conteúdo adicionado)
+175,Qual comando Git exibe quem modificou cada linha de um arquivo por último?,git log,git show,git blame,git find,git blame
+176,Qual protocolo de rede é a base para a comunicação de dados na World Wide Web (Web)?,FTP,SMTP,HTTP,SSH,HTTP
+177,Qual porta padrão é usada pelo protocolo HTTP não criptografado?,443,21,22,80,80
+178,Qual porta padrão é usada pelo protocolo HTTPS (criptografado)?,80,443,8080,25,443
+179,Qual o significado do código de status HTTP 404?,Sucesso (OK),Erro interno do servidor,Não Encontrado (Not Found),Acesso Proibido (Forbidden),Não Encontrado (Not Found)
+180,Qual o significado do código de status HTTP 200?,Criado com sucesso,Sucesso (OK),Redirecionamento Permanente,Erro de Requisição do Cliente,Sucesso (OK)
+181,"Qual o significado dos códigos de status HTTP iniciados com o número 5 (ex: 500, 503)?",Sucesso,Erros do cliente,Redirecionamentos,Erros do servidor,Erros do servidor
+182,O que significa a sigla API?,Application Programming Interface,Automated Program Integration,Advanced Peripheral Interchange,Array Process Information,Application Programming Interface
+183,Qual formato de arquivo baseado em texto é comumente usado para transferir dados web em pares chave-valor?,XML,JSON,CSV,INI,JSON
+184,Qual das seguintes alternativas NÃO é um tipo de requisição/método HTTP?,GET,POST,FETCH,DELETE,FETCH
+185,Qual método HTTP é recomendado para criar um novo recurso no servidor?,GET,POST,PUT,OPTIONS,POST
+186,Qual método HTTP é estritamente usado para recuperar dados do servidor sem modificá-los?,GET,POST,PATCH,DELETE,GET
+187,O que é o Docker na engenharia de software?,Uma IDE para programar em C#,Uma plataforma de conteinerização de aplicações,Um banco de dados em nuvem,Um roteador de internet de alta velocidade,Uma plataforma de conteinerização de aplicações
+188,O que significa a sigla CSS?,Cascading Style Sheets,Computer Style Sheets,Creative Style Systems,Complex Style Sheets,Cascading Style Sheets
+189,Em que ano a linguagem Java foi lançada oficialmente pela Sun Microsystems?,1991,1995,2000,2005,1995
+190,Qual linguagem de programação é nativamente interpretada pelos navegadores web?,Python,C++,JavaScript,Java,JavaScript
+191,Qual o compilador oficial padrão da linguagem C no ecossistema Linux?,javac,gcc,g++,python3,gcc
+192,O que significa a sigla IDE?,Integrated Development Environment,Internal Data Engine,Interpreted Design Element,Integrated Device Editor,Integrated Development Environment
+193,Qual termo descreve o ato de encontrar e corrigir erros (bugs) no código?,Compilação,Refatoração,Depuração (Debugging),Deploy,Depuração (Debugging)
+194,O que significa o termo 'Refatorar' (Refactoring) o código?,Mudar o comportamento do sistema adicionando recursos,Reescrever o código interno para melhorar legibilidade e estrutura sem alterar seu comportamento externo,Deletar todo o projeto e começar do zero,Mudar o banco de dados de relacional para NoSQL,Reescrever o código interno para melhorar legibilidade e estrutura sem alterar seu comportamento externo
+195,Qual das seguintes alternativas é uma linguagem de folhas de estilo que compila para CSS?,TypeScript,Sass,Node.js,React,Sass
+196,Qual framework javascript mantido pelo Facebook (Meta) é baseado em componentes?,Angular,Vue.js,React,Laravel,React
+197,O que faz um servidor DNS na internet?,Hospeda páginas HTML,Converte nomes de domínio amigáveis (ex: google.com) em endereços IP,Criptografa cartões de crédito,Limpa arquivos temporários da rede,Converte nomes de domínio amigáveis (ex: google.com) em endereços IP
+198,Qual o principal objetivo do protocolo SSH?,Transferir e-mails em massa,Acesso e gerenciamento remoto e seguro de computadores via linha de comando,Exibir animações 3D no navegador,Conectar mouses sem fio,Acesso e gerenciamento remoto e seguro de computadores via linha de comando
+199,Qual tipo de linguagem de programação é o Python?,Linguagem de Baixo Nível / Assembly,Linguagem de Alto Nível / Interpretada,Linguagem de Marcação,Linguagem de Consulta de Banco de Dados,Linguagem de Alto Nível / Interpretada
+200,Qual termo descreve o processo de colocar uma aplicação em produção para que os usuários possam acessá-la?,Debugging,Testing,Commit,Implantação (Deploy),Implantação (Deploy)

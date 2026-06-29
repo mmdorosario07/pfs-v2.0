@@ -19,16 +19,20 @@ public class FutQuiz extends JFrame {
     private final JPanel head;
     private final String[] opt = {"Reiniciar", "Sair"};
     private final int MAX_QUESTIONS = 25;
+    private final Ranking _Ranking = new Ranking();
+    private final String player_name;
 
     
-    public FutQuiz() {
-        getQuestionsList();
+    public FutQuiz(String player_name) {
+        this.player_name = player_name;
+        getQuestionsList("data/futebol.csv");
         setTitle("Futquizz");
         setIconImage(icon.getImage());
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new GridBagLayout());
         setLocationRelativeTo(null);
+        setSize(600, 400);
 
         head = new JPanel();
         head.setLayout(new GridBagLayout());
@@ -45,14 +49,26 @@ public class FutQuiz extends JFrame {
         //Conteudos do titulo
 
         //SAIR
-        JButton exit = new JButton("Sair");
-        exit.addActionListener(
+
+        String[] temas = {"Futebol", "Basketboll", "Programação", "Fórmula1"};
+        JComboBox<String> tema = new JComboBox<>(temas);
+        tema.addActionListener(
             e -> {
-                //Sair do jogo configurar melhor depois
-                System.exit(0);
+                String dir = "data/futebol.csv";
+                if (((String) tema.getSelectedItem()).equals(temas[0]) ) {
+                    dir = "data/futebol.csv";
+                } else if (((String) tema.getSelectedItem()).equals(temas[1]) ) {
+                    dir = "data/basket.csv";
+                } else if (((String) tema.getSelectedItem()).equals(temas[2]) ) {
+                    dir = "data/programacao.csv";
+                } else if (((String) tema.getSelectedItem()).equals(temas[3]) ) {
+                    dir = "data/formula.csv";
+                } 
+                getQuestionsList(dir);
+                reset();
             }
         );
-        head.add(exit, new GridConf(0,0,1,1,'b'));
+        head.add(tema, new GridConf(0,0,1,1,'b'));
 
         //PONTUAÇÃO
         points = new JLabel("Pontuação: " + pa + "   Vida: "+pv);
@@ -81,8 +97,8 @@ public class FutQuiz extends JFrame {
     }
 
 
-    private void getQuestionsList() {
-        java.io.File file = new java.io.File("data/quizz.csv");//Db File
+    private void getQuestionsList(String pathString) {
+        java.io.File file = new java.io.File(pathString);//Db File
         try (BufferedReader reader = new BufferedReader(new FileReader(file))){
             String data;
             while ((data = reader.readLine()) != null) {
@@ -139,6 +155,7 @@ public class FutQuiz extends JFrame {
                 "Chegaste ao fim do jogo!","Congratulations",
                 JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
                 null , opt, opt[0]);
+                _Ranking.addRanking(player_name, pa++);
             if (x == 0) {
                 Collections.shuffle(QuestionsList);
                 question_id = 0;
@@ -146,6 +163,7 @@ public class FutQuiz extends JFrame {
                 pa = 0;
                 updateQuestion();
             } else if (x == 1) {
+
                 System.exit(0);
             }
             
@@ -162,6 +180,7 @@ public class FutQuiz extends JFrame {
                 "Vc perdeu!","Se Fudeu!",
                 JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE
                 ,null , opt, opt[0]);
+            _Ranking.addRanking(player_name, pa++);
             if (x == 0) {
                 Collections.shuffle(QuestionsList);
                 question_id = 0;
@@ -177,5 +196,13 @@ public class FutQuiz extends JFrame {
             updateQuestion();
         }
         points.setText("Pontuação: "+pa+"   Vida: "+pv);
+    }
+
+    private void reset () {
+        _Ranking.addRanking(player_name, pa);
+        pv = 3;
+        pa = 0;
+        question_id = 0;
+        updateQuestion();
     }
 }

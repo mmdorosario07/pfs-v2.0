@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Image;
@@ -13,9 +14,9 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import java.io.*;
+import javax.swing.SwingConstants;
 
 public class Login extends JFrame{
-
     ImageIcon icon = new ImageIcon("data/assets/icon.jpg");
     ImageIcon img = new ImageIcon("data/assets/campo.jpg");
     private final String[] user = new String[2];
@@ -26,7 +27,7 @@ public class Login extends JFrame{
 
     Login() {
         //window configs
-        setTitle("FutQuizz");
+        setTitle("Quizz");
         setIconImage(icon.getImage());
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -42,27 +43,32 @@ public class Login extends JFrame{
 
         //login window
         JPanel loginPanel = new JPanel(new GridBagLayout());
+
         JLabel loginLabel = new JLabel("Login");//titulo
+        loginLabel.setFont(new Font("Serif", Font.BOLD, 30));
+        loginLabel.setHorizontalAlignment(SwingConstants.CENTER);
         loginPanel.add(loginLabel, new GridConf(0,0,2,1, 'h'));
 
         //entrada do nome
         JLabel name_field = new JLabel("Nome");//depois adicionar icones ilustrativos
-        loginPanel.add(name_field, new GridConf(0,1,1,1,'n'));
+        name_field.setHorizontalAlignment(SwingConstants.LEFT);
+        loginPanel.add(name_field, new GridConf(0,1,1,1,'h'));
         JTextField name_input = new JTextField(20);
-        loginPanel.add(name_input, new GridConf(1,1,1,1,'n'));
+        loginPanel.add(name_input, new GridConf(1,1,1,1,'h'));
 
         //entrada do pswd
         JLabel pswd_field = new JLabel("Password");
-        loginPanel.add(pswd_field, new GridConf(0,2,1,1,'n'));
+        pswd_field.setHorizontalAlignment(SwingConstants.LEFT);
+        loginPanel.add(pswd_field, new GridConf(0,2,1,1,'h'));
         JPasswordField pswd_input = new JPasswordField(20);
-        loginPanel.add(pswd_input, new GridConf(1,2,1,1,'n'));
+        loginPanel.add(pswd_input, new GridConf(1,2,1,1,'h'));
 
         JButton goto_game = new JButton("Go!");
         loginPanel.add(goto_game, new GridConf(0,3,2,1,'h'));
 
         //Adicionar usuario
         JLabel add_acct = new JLabel("Sem Conta?");
-        loginPanel.add(add_acct, new GridConf(0,4,1,1,'n'));
+        loginPanel.add(add_acct, new GridConf(0,4,1,1,'h'));
         JButton add_user = new JButton("Criar Conta");
         loginPanel.add(add_user, new GridConf(1,4,1,1,'h'));
         add_user.addActionListener(create_user);
@@ -78,11 +84,8 @@ public class Login extends JFrame{
         //por fim adicionar os elementos
         add(imgJPanel);
         add(loginPanel);
-        ActionListener login_to_game = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent event) {
-                loginToGame(name_input.getText(), new String(pswd_input.getPassword()));
-            }
+        ActionListener login_to_game = (ActionEvent event) -> {
+            loginToGame(name_input.getText(), new String(pswd_input.getPassword()));
         };
         goto_game.addActionListener(login_to_game);
 
@@ -99,9 +102,10 @@ public class Login extends JFrame{
     private void loginToGame(String name, String pswd) {
         if (getUserdata(name)) {
             if (pswd.equals(user[1])) {
-                JFrame q = new FutQuiz();
+                JFrame q = new FutQuiz(name);
+                dispose();
                 q.setVisible(true);
-                setVisible(false);
+                
             }
         } else {
             System.out.println("erro de login");
