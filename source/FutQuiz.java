@@ -60,7 +60,6 @@ public class FutQuiz extends JFrame {
 
 
 
-
         //Conteudos do "game"
         JPanel questions = new JPanel();
         questions.setLayout(new GridBagLayout());
