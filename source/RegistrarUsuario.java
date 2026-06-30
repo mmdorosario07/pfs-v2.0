@@ -28,7 +28,6 @@ public class RegistrarUsuario extends JDialog {
         add(loginLabel, new GridConf(0,0,2,1, 'h'));
         loginLabel.setFont(new Font(Font.SERIF,Font.BOLD, 30));
         loginLabel.setHorizontalAlignment(SwingConstants.CENTER);
-
         //Username Field
         JLabel name_field = new JLabel("Nome");//depois adicionar icones ilustrativos
         add(name_field, new GridConf(0,1,1,1,'h'));

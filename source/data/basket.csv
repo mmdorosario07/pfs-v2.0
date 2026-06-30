@@ -1,4 +1,3 @@
-id(numero),pergunta,resposa1,resposta2,resposta3,reposta4,resposta certa
 1,Quem é o maior pontuador de sempre da história da NBA na temporada regular?,Michael Jordan,Kareem Abdul-Jabbar,LeBron James,Kobe Bryant,LeBron James
 2,Quantos campeonatos da NBA venceu Michael Jordan na sua carreira?,4,5,6,7,6
 3,Qual jogador detém o recorde de mais anéis de campeão da NBA como jogador (11 títulos)?,Bill Russell,Sam Jones,Kareem Abdul-Jabbar,Michael Jordan,Bill Russell
@@ -9,7 +8,7 @@ id(numero),pergunta,resposa1,resposta2,resposta3,reposta4,resposta certa
 8,Quem é o líder histórico da NBA em lançamentos de três pontos convertidos?,Ray Allen,Reggie Miller,Stephen Curry,James Harden,Stephen Curry
 9,Qual lenda dos Los Angeles Lakers ficou famosa pelo seu lançamento imparável conhecido como 'Skyhook'?,Shaquille O'Neal,Kareem Abdul-Jabbar,Magic Johnson,Wilt Chamberlain,Kareem Abdul-Jabbar
 10,A rivalidade épica entre os Boston Celtics e os LA Lakers nos anos 80 foi personificada por quais dois jogadores?,Michael Jordan e Isiah Thomas,Magic Johnson e Larry Bird,Kobe Bryant e Paul Pierce,Bill Russell e Wilt Chamberlain,Magic Johnson e Larry Bird
-11,"Quantos campeonatos da NBA conquistou Kobe Bryant, todos pelos Los Angeles Lakers?",3,4,5,6,5
+11,"Quantos campeonatos da NBA conquistou Kobe Bryant todos pelos Los Angeles Lakers?",3,4,5,6,5
 12,Qual jogador detém o recorde de mais assistências na história da NBA?,Magic Johnson,John Stockton,Jason Kidd,Chris Paul,John Stockton
 13,Em qual equipa Shaquille O'Neal e Kobe Bryant jogaram juntos para vencer três campeonatos seguidos (2000-2002)?,Miami Heat,Orlando Magic,Los Angeles Lakers,Phoenix Suns,Los Angeles Lakers
 14,Quem é o jogador mais jovem de sempre a vencer o prémio de MVP da temporada regular da NBA?,LeBron James,Derrick Rose,Michael Jordan,Luka Doncic,Derrick Rose
@@ -17,11 +16,11 @@ id(numero),pergunta,resposa1,resposta2,resposta3,reposta4,resposta certa
 16,Qual jogador marcou 81 pontos num único jogo contra os Toronto Raptors em 2006?,Michael Jordan,LeBron James,Kobe Bryant,Tracy McGrady,Kobe Bryant
 17,Em que ano foi fundada a National Basketball Association (NBA)?,1936,1946,1956,1966,1946
 18,Quem foi o primeiro jogador na história da NBA a ser eleito MVP por unanimidade?,Michael Jordan,LeBron James,Stephen Curry,Shaquille O'Neal,Stephen Curry
-19,"Que equipa Michael Jordan defendeu nas suas duas últimas temporadas na NBA, após o seu segundo retorno?",Chicago Bulls,Miami Heat,Washington Wizards,Charlotte Hornets,Washington Wizards
+19,"Que equipa Michael Jordan defendeu nas suas duas últimas temporadas na NBA após o seu segundo retorno?",Chicago Bulls,Miami Heat,Washington Wizards,Charlotte Hornets,Washington Wizards
 20,Quem é o único jogador da história da NBA a conseguir uma média de triplo-duplo em quatro temporadas diferentes?,Magic Johnson,Oscar Robertson,Russell Westbrook,LeBron James,Russell Westbrook
 21,Qual lendário jogador e treinador é a silhueta representada no logótipo oficial da NBA?,Jerry West,Michael Jordan,Bill Russell,Wilt Chamberlain,Jerry West
 22,Que jogador dos Miami Heat foi apelidado de 'Flash' e venceu três campeonatos pela franquia?,LeBron James,Dwyane Wade,Chris Bosh,Ray Allen,Dwyane Wade
-23,"Quem foi o MVP das Finais da NBA de 2011, liderando os Dallas Mavericks ao título contra o Miami Heat?",Dirk Nowitzki,Jason Kidd,Jason Terry,Luka Doncic,Dirk Nowitzki
+23,"Quem foi o MVP das Finais da NBA de 2011 liderando os Dallas Mavericks ao título contra o Miami Heat?",Dirk Nowitzki,Jason Kidd,Jason Terry,Luka Doncic,Dirk Nowitzki
 24,Qual jogador é o líder histórico da NBA em desarmes de lançamento (abafos/tocos)?,Shaquille O'Neal,Hakeem Olajuwon,Mutombo,Kareem Abdul-Jabbar,Hakeem Olajuwon
 25,Que equipa selecionou LeBron James como a primeira escolha absoluta no Draft da NBA de 2003?,Miami Heat,Cleveland Cavaliers,Los Angeles Lakers,New York Knicks,Cleveland Cavaliers
 26,Quantas vezes a lenda Larry Bird venceu o prémio de MVP de forma consecutiva nos anos 80?,2 vezes,3 vezes,4 vezes,Nunca venceu,3 vezes
@@ -34,7 +33,7 @@ id(numero),pergunta,resposa1,resposta2,resposta3,reposta4,resposta certa
 33,Que jogador detém o recorde de maior número de ressaltos (rebotes) na história da NBA?,Bill Russell,Wilt Chamberlain,Kareem Abdul-Jabbar,Dennis Rodman,Wilt Chamberlain
 34,"Quem foi o MVP das Finais da NBA em 1969, sendo o único jogador na história a ganhar o prémio mesmo perdendo a série final?",Jerry West,Bill Russell,Wilt Chamberlain,Elgin Baylor,Jerry West
 35,Em que ano Kobe Bryant e os Lakers venceram o histórico jogo 7 contra os Celtics para conquistar o seu 5º anel?,2008,2009,2010,2011,2010
-36,"Qual jogador francês, lenda dos San Antonio Spurs, venceu 4 campeonatos e foi MVP das Finais em 2007?",Boris Diaw,Tony Parker,Rudy Gobert,Nicolas Batum,Tony Parker
+36,"Qual jogador francês, lenda dos San Antonio Spurs venceu 4 campeonatos e foi MVP das Finais em 2007?",Boris Diaw,Tony Parker,Rudy Gobert,Nicolas Batum,Tony Parker
 37,Quem foi conhecido como 'The Round Mound of Rebound' e tornou-se um analista famoso na TV americana?,Shaquille O'Neal,Charles Barkley,Karl Malone,Patrick Ewing,Charles Barkley
 38,Qual extremo-poste do Utah Jazz é o terceiro maior pontuador da história da NBA e formou dupla icónica com John Stockton?,Karl Malone,Charles Barkley,Kevin McHale,Scottie Pippen,Karl Malone
 39,Quem foi o herói e MVP das Finais que deu o primeiro título da história aos Toronto Raptors em 2019?,Kyle Lowry,Pascal Siakam,Kawhi Leonard,DeMar DeRozan,Kawhi Leonard
@@ -57,8 +56,8 @@ id(numero),pergunta,resposa1,resposta2,resposta3,reposta4,resposta certa
 56,Qual jogador camaronês naturalizado americano foi eleito MVP da temporada regular de 2022-23 pelo Philadelphia 76ers?,Joel Embiid,Pascal Siakam,Ben Simmons,Jimmy Butler,Joel Embiid
 57,Que ala-armador estrela liderou o Phoenix Suns às Finais de 2021 ao lado de Chris Paul?,Devin Booker,Deandre Ayton,Mikal Bridges,Bradley Beal,Devin Booker
 58,Qual jogador liderou os Miami Heat a duas finais improváveis da NBA (2020 e 2023) com o seu estilo aguerrido?,Bam Adebayo,Jimmy Butler,Tyler Herro,Kyle Lowry,Jimmy Butler
-59,"De que país é natural o base Shai Gilgeous-Alexander, estrela dos Oklahoma City Thunder?",Estados Unidos,Canadá,Austrália,França,Canadá
-60,"Quem é o atual treinador com mais vitórias na história da NBA, comandante eterno do San Antonio Spurs?",Phil Jackson,Pat Riley,Gregg Popovich,Doc Rivers,Gregg Popovich
+59,"De que país é natural o base Shai Gilgeous-Alexander estrela dos Oklahoma City Thunder?",Estados Unidos,Canadá,Austrália,França,Canadá
+60,"Quem é o atual treinador com mais vitórias na história da NBA comandante eterno do San Antonio Spurs?",Phil Jackson,Pat Riley,Gregg Popovich,Doc Rivers,Gregg Popovich
 61,Qual jogador canadiano venceu o prémio de MVP da NBA de forma consecutiva em 2005 e 2006 pelo Phoenix Suns?,Steve Nash,Dirk Nowitzki,Andrew Wiggins,Shai Gilgeous-Alexander,Steve Nash
 62,Que jogador dos Minnesota Timberwolves é amplamente comparado a Michael Jordan pelo seu estilo atlético e liderança?,Karl-Anthony Towns,Anthony Edwards,Rudy Gobert,D'Angelo Russell,Anthony Edwards
 63,Qual poste defensivo francês já venceu o prémio de Defensor do Ano (DPOY) por 4 vezes na NBA?,Victor Wembanyama,Joakim Noah,Rudy Gobert,Ben Wallace,Rudy Gobert
@@ -70,7 +69,7 @@ id(numero),pergunta,resposa1,resposta2,resposta3,reposta4,resposta certa
 69,De que lenda do basquetebol lituano é filho o atual jogador Domantas Sabonis?,Arvydas Sabonis,Sarunas Marciulionis,Jonas Valanciunas,Linas Kleiza,Arvydas Sabonis
 70,Qual base do Indiana Pacers tornou-se o líder em assistências da liga com um estilo de jogo ultra-rápido?,Tyrese Haliburton,Buddy Hield,Bennedict Mathurin,Myles Turner,Tyrese Haliburton
 71,Que extremo dos LA Clippers é conhecido pela sua alcunha 'PG13'?,Paul George,Kawhi Leonard,James Harden,Russell Westbrook,Paul George
-72,"Quem é o técnico principal de longa data do Miami Heat, que assumiu o cargo após Pat Riley?",Erik Spoelstra,Brad Stevens,Frank Vogel,Rick Carlisle,Erik Spoelstra
+72,"Quem é o técnico principal de longa data do Miami Heat que assumiu o cargo após Pat Riley?",Erik Spoelstra,Brad Stevens,Frank Vogel,Rick Carlisle,Erik Spoelstra
 73,Qual jogador dos New York Knicks tornou-se o herói de Manhattan ao liderar a equipa com exibições de mais de 40 pontos nos playoffs?,Julius Randle,Jalen Brunson,RJ Barrett,Josh Hart,Jalen Brunson
 74,Quantos MVP da temporada regular já conquistou o poste Nikola Jokic até ao final da época de 2024?,1,2,3,4,3
 75,Quem foi o vencedor do prémio de Estreante do Ano (Rookie of the Year) na NBA em 2024?,Chet Holmgren,Victor Wembanyama,Brandon Miller,Jaime Jaquez Jr,Victor Wembanyama
@@ -85,8 +84,8 @@ id(numero),pergunta,resposa1,resposta2,resposta3,reposta4,resposta certa
 82,Quantas faltas pessoais pode cometer um jogador num jogo da NBA antes de ser excluído por faltas?,5 faltas,6 faltas,7 faltas,4 faltas,6 faltas
 83,Quantos pontos vale cada lance livre convertido após uma falta?,1 ponto,2 pontos,3 pontos,0 pontos,1 ponto
 84,Como se chama a infração cometida quando um jogador caminha ou corre com a bola nas mãos sem a driblar?,Drible duplo,Passos (Andar),Falta técnica,Zona,Passos (Andar)
-85,"O que acontece se um jogador driblar a bola, pará-la segurando-a com as duas mãos, e voltar a driblar?",É falta pessoal,É considerada a infração de drible duplo (dois dribles),O jogo segue normalmente,É falta técnica,É considerada a infração de drible duplo (dois dribles)
-86,"Após sofrer um cesto ou iniciar o período, quantos segundos tem uma equipa para passar a bola da sua meia-pista defensiva para a pista ofensiva?",5 segundos,8 segundos,10 segundos,12 segundos,8 segundos
+85,"O que acontece se um jogador driblar a bola pará-la segurando-a com as duas mãos, e voltar a driblar?",É falta pessoal,É considerada a infração de drible duplo (dois dribles),O jogo segue normalmente,É falta técnica,É considerada a infração de drible duplo (dois dribles)
+86,"Após sofrer um cesto ou iniciar o período quantos segundos tem uma equipa para passar a bola da sua meia-pista defensiva para a pista ofensiva?",5 segundos,8 segundos,10 segundos,12 segundos,8 segundos
 87,Como se chama a violação em que um jogador atacante permanece mais de um tempo específico consecutivo dentro da área restritiva (garrafão)?,Regra dos 3 segundos,Regra dos 5 segundos,Regra dos 8 segundos,Falta ofensiva,Regra dos 3 segundos
 88,A que altura padrão do solo está fixado o aro do cesto de basquetebol em competições oficiais?,"2,90 metros","3,05 metros","3,15 metros","3,00 metros","3,05 metros"
 89,O que acontece se uma partida de basquetebol terminar empatada no final do tempo regulamentar?,Termina em empate,Ocorre um prolongamento de 5 minutos,Ocorre um prolongamento de 10 minutos,Decide-se em lances livres alternados,Ocorre um prolongamento de 5 minutos
@@ -96,17 +95,17 @@ id(numero),pergunta,resposa1,resposta2,resposta3,reposta4,resposta certa
 93,O que acontece quando uma equipa atinge o limite de faltas coletivas num período (bónus)?,A equipa perde a posse de bola,Qualquer falta defensiva subsequente dá direito a dois lances livres ao adversário,O jogo é interrompido,O treinador é expulso,Qualquer falta defensiva subsequente dá direito a dois lances livres ao adversário
 94,Qual a punição na NBA para uma falta classificada como 'Flagrante 2'?,Apenas um lance livre,Exclusão automática imediata do jogador do jogo,Aviso verbal,Dois lances livres mas o jogador continua,Exclusão automática imediata do jogador do jogo
 95,Qual é o diâmetro oficial aproximado de um aro de basquetebol regulamentar?,45 cm,50 cm,40 cm,55 cm,45 cm
-96,"É permitido a um jogador defensor dar um passe para trás, cruzando a linha do meio-campo, quando já está na pista de ataque?","Sim, a qualquer momento","Não, isso constitui uma violação de retorno à pista defensiva",Apenas se for com as duas mãos,Apenas nos últimos 2 minutos,"Não, isso constitui uma violação de retorno à pista defensiva"
+96,"É permitido a um jogador defensor dar um passe para trás cruzando a linha do meio-campo, quando já está na pista de ataque?","Sim, a qualquer momento","Não, isso constitui uma violação de retorno à pista defensiva",Apenas se for com as duas mãos,Apenas nos últimos 2 minutos,"Não, isso constitui uma violação de retorno à pista defensiva"
 97,Como é feito o início de uma partida oficial de basquetebol para disputar a primeira posse de bola?,Lançamento de uma moeda,Bola ao ar (salto entre dois) no círculo central,A equipa visitante começa com a bola,Sorteio prévio,Bola ao ar (salto entre dois) no círculo central
 98,Quantos segundos tem um jogador para efetuar o lançamento de um lance livre após o árbitro lhe entregar a bola?,5 segundos,10 segundos,15 segundos,24 segundos,10 segundos
-99,"Na reposição de bola em jogo pela linha lateral ou final, quantos segundos tem o atleta para passar a bola?",3 segundos,5 segundos,8 segundos,10 segundos,5 segundos
+99,"Na reposição de bola em jogo pela linha lateral ou final quantos segundos tem o atleta para passar a bola?",3 segundos,5 segundos,8 segundos,10 segundos,5 segundos
 100,Quem inventou o desporto do basquetebol em dezembro de 1891?,James Naismith,Abner Doubleday,Walter Camp,William G. Morgan,James Naismith
 101,Em qual estado norte-americano foi inventado o basquetebol?,Nova Iorque,Massachusetts,California,Illinois,Massachusetts
 102,Que objetos foram usados originalmente como cestos na primeira partida de basquetebol da história?,Cestas de pêssegos,Caixas de madeira,Baldes de metal,Redes de pesca,Cestas de pêssegos
 103,Quantas substituições uma equipa pode fazer durante uma partida de basquetebol?,Apenas 5,Até 10,"Ilimitadas, desde que o jogo esteja interrompido",Não são permitidas substituições,"Ilimitadas, desde que o jogo esteja interrompido"
 104,A linha de três pontos da FIBA fica a que distância padrão do centro do cesto?,"6,25 metros","6,75 metros","7,24 metros","7,00 metros","6,75 metros"
 105,Qual a distância da linha de três pontos na NBA (no topo do arco)?,"6,75 metros","7,05 metros","7,24 metros","7,50 metros","7,24 metros"
-106,"Como se chama a jogada em que um atacante salta, recebe a bola no ar e afunda (enterra) antes de tocar o solo?",Layup,Alley-oop,Floater,Fadeaway,Alley-oop
+106,"Como se chama a jogada em que um atacante salta recebe a bola no ar e afunda (enterra) antes de tocar o solo?",Layup,Alley-oop,Floater,Fadeaway,Alley-oop
 107,O que significa o termo 'Airball'?,Um lançamento espetacular de muito longe,"Um lançamento que não toca em nada (nem no aro, nem na tabela, nem na rede)",Um passe longo pelo alto,O bloqueio perfeito de um lançamento,"Um lançamento que não toca em nada (nem no aro, nem na tabela, nem na rede)"
 108,O que é um 'Fadeaway jump shot'?,"Um lançamento feito enquanto o jogador salta para trás, afastando-se do defensor",Um afundanço de costas,Um passe sem olhar,Um drible por entre as pernas,"Um lançamento feito enquanto o jogador salta para trás, afastando-se do defensor"
 109,Qual o nome dado à tabela de posições teórica dos jogadores onde o número 1 é o Base e o número 5 é o...,Extremo,Poste (Pivô),Ala-Armador,Segundo Base,Poste (Pivô)

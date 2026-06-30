@@ -71,7 +71,7 @@ id(numero),pergunta,resposa1,resposta2,resposta3,reposta4,resposta certa
 70,Como você oculta um elemento no CSS sem remover o espaço que ele ocupa?,display: none;,visibility: hidden;,opacity: 1;,display: block;,visibility: hidden;
 71,Qual tag HTML é usada para incorporar código JavaScript interno?,<javascript>,<script>,<js>,<code-js>,<script>
 72,Qual tag HTML é usada para criar uma tabela?,<table>,<grid>,<tab>,<list>,<table>
-73,"No CSS Box Model, o que fica diretamente entre o padding e a margin?",Content,Border,Outline,Gap,Border
+73,No CSS Box Model o que fica diretamente entre o padding e a margin?,Content,Border,Outline,Gap,Border
 74,Qual seletor CSS é usado para aplicar estilos quando o mouse passa por cima de um elemento?,:visited,:focus,:active,:hover,:hover
 75,Qual unidade de medida CSS é relativa ao tamanho da fonte do elemento raiz?,em,rem,px,vh,rem
 76,Qual comando SQL é usado para extrair dados de um banco de dados?,EXTRACT,GET,SELECT,OPEN,SELECT
@@ -104,7 +104,7 @@ id(numero),pergunta,resposa1,resposta2,resposta3,reposta4,resposta certa
 103,Qual é a complexidade de tempo no pior caso para buscar um elemento em uma Árvore Binária de Busca balanceada?,O(1),O(n),O(log n),O(n log n),O(log n)
 104,Qual algoritmo de ordenação divide repetidamente uma lista ao meio e depois mescla as sublistas ordenadas?,Bubble Sort,Quick Sort,Insertion Sort,Merge Sort,Merge Sort
 105,Qual a complexidade de tempo do pior caso para o algoritmo de ordenação Bubble Sort?,O(n),O(log n),O(n²),O(n log n),O(n²)
-106,"Em análise de algoritmos, o que representa a notação Big O?",O tempo exato de execução,O limite superior da complexidade de tempo ou espaço (pior caso),O melhor caso de execução,O número de linhas de código,O limite superior da complexidade de tempo ou espaço (pior caso)
+106,Em análise de algoritmos o que representa a notação Big O?,O tempo exato de execução,O limite superior da complexidade de tempo ou espaço (pior caso),O melhor caso de execução,O número de linhas de código,O limite superior da complexidade de tempo ou espaço (pior caso)
 107,Qual estrutura de dados utiliza uma função de espalhamento para mapear chaves para valores?,Lista Duplamente Ligada,Tabela Hash (Hash Table),Heap,Grafo,Tabela Hash (Hash Table)
 108,O que caracteriza uma Lista Ligada (Linked List)?,Elementos guardados em posições de memória consecutivas,Cada elemento (nó) contém o dado e uma referência para o próximo nó,Acesso aleatório aos elementos em tempo O(1),Uma estrutura estática de tamanho fixo,Cada elemento (nó) contém o dado e uma referência para o próximo nó
 109,Qual algoritmo é mais eficiente para buscar um elemento em um array já ordenado?,Busca Linear,Busca Binária,Busca em Profundidade (DFS),Busca em Largura (BFS),Busca Binária
@@ -125,7 +125,7 @@ id(numero),pergunta,resposa1,resposta2,resposta3,reposta4,resposta certa
 124,Qual estrutura de dados linear permite inserções e remoções eficientes em ambas as extremidades?,Pilha,Fila comum,Deque (Double-ended queue),Árvore,Deque (Double-ended queue)
 125,Qual estratégia algorítmica resolve um subproblema apenas uma vez e armazena o resultado para uso futuro?,Dividir para Conquistar,Programação Dinâmica,Algoritmo Ambicioso (Greedy),Força Bruta,Programação Dinâmica
 126,Qual pilar da POO esconde os detalhes internos de uma classe e expõe apenas o necessário?,Herança,Polimorfismo,Encapsulamento,Abstração,Encapsulamento
-127,"Como se chama a capacidade de um objeto assumir várias formas (por exemplo, um método com o mesmo nome se comportar diferente)?",Polimorfismo,Encapsulamento,Herança,Abstração,Polimorfismo
+127,Como se chama a capacidade de um objeto assumir várias formas (por exemplo um método com o mesmo nome se comportar diferente)?,Polimorfismo,Encapsulamento,Herança,Abstração,Polimorfismo
 128,Qual palavra-chave em Java/C# indica que uma classe está herdando de outra?,implements,extends (ou ':' em C#),inherits,super,extends (ou ':' em C#)
 129,O que é um 'Construtor' em Programação Orientada a Objetos?,Um método especial chamado automaticamente ao instanciar um objeto,Uma ferramenta externa para criar código,Uma palavra-chave para deletar objetos,Um tipo de dados numérico,Um método especial chamado automaticamente ao instanciar um objeto
 130,Qual modificador de acesso permite que um membro seja acessado apenas dentro da própria classe?,public,protected,private,internal,private

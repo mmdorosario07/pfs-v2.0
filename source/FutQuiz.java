@@ -64,6 +64,7 @@ public class FutQuiz extends JFrame {
                 } else if (((String) tema.getSelectedItem()).equals(temas[3]) ) {
                     dir = "data/formula.csv";
                 } 
+                QuestionsList.clear();
                 getQuestionsList(dir);
                 reset();
             }
@@ -203,6 +204,7 @@ public class FutQuiz extends JFrame {
         pv = 3;
         pa = 0;
         question_id = 0;
+        
         updateQuestion();
     }
 }
